@@ -65,8 +65,8 @@ class Photos(Base):
 
     id = Column(String(length=255), primary_key=True, default=generate_uuid)
     user_uid = Column(String(length=255), ForeignKey('users.uid'))
-    photo_id = Column(String(length=255))
-    photo_url = Column(String(length=255))
+    photo_id = Column(String(length=1000))
+    photo_url = Column(String(length=1000))
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
 
